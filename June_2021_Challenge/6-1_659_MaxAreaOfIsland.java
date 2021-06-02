@@ -6,7 +6,10 @@
 
 // Return the maximum area of an island in grid. If there is no island, return 0.
 
-
+//--------------------------------------
+// Recursion: each area BFS
+// ** Mark 'grid[i][j]=0' instead of 'visited[][]' another datastructure to record visits
+//--------------------------------------
 
 class Solution {
 	int[][] grid;
@@ -22,7 +25,6 @@ class Solution {
 
     public int maxAreaOfIsland(int[][] grid) {
     	this.grid = grid;
-    	// int[][] visited = new int[grid.length][grid[0].length];
     	int max=0;
 
     	for(int i=0;i<grid.length;i++){
@@ -40,7 +42,7 @@ class Solution {
 
 
 // Example 1:
-<img src="../LeetCode/Image/659.jpeg">
+
 
 // Input: grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
 // Output: 6
@@ -58,4 +60,4 @@ class Solution {
 // m == grid.length
 // n == grid[i].length
 // 1 <= m, n <= 50
-grid[i][j] is either 0 or 1.
+// grid[i][j] is either 0 or 1.
